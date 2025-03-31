@@ -57,13 +57,6 @@ Coming soon!
 
 ---
 
-## 📃 License
-
-This project is open-source under the MIT License.  
-Feel free to contribute or fork for your own community!
-
----
-
 ## 👨‍💻 Credits
 
 Developed by Cloutmatic  
