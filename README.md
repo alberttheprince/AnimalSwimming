@@ -1,12 +1,12 @@
 # 🐾 Animal Swim Module for FiveM
 
-Make animals swim properly and naturally in water! This lightweight client-side script prevents animal peds (like dogs) from drowning or ragdolling in water, applying smooth upward force and preserving immersion when players use animal models.
+Allows animal to swim and move in water! This lightweight client-side script prevents land-based animal peds from drowning or ragdolling in water, applying smooth upward force and preserving immersion when players use animal models.
 
 ---
 
 ## ✨ Features
 
-- Automatically Detects if the player is using an animal ped
+- Automatically detects if the player is using an animal ped
 - Applies dynamic float behavior in deep and shallow water
 - Prevents animal drowning by restoring health
 - Disables ragdoll in water, re-enables on land
@@ -32,7 +32,7 @@ Preview: https://youtu.be/3Yisj38mM34
 
 ## 🧠 How It Works
 
-When a player loads into the server, the script checks if their ped is an animal (`GetPedType(ped) == 28`). If so, it applies buoyancy logic every 200ms when the player is in water and not in a vehicle. It prevents drowning, sinking, and bouncing too high in the water, giving a much more realistic feel for roleplay scenarios involving dogs or other animals.
+When a player loads into the server, the script checks if their ped is an animal (`GetPedType(ped) == 28`). If so, it applies buoyancy logic every 200ms when the player is in water, not a vehicle. It prevents drowning, sinking, and bouncing too high in the water, giving a much more realistic feel for roleplay scenarios involving dogs or other animals.
 
 ---
 
