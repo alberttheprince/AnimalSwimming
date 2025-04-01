@@ -1,5 +1,6 @@
 local isAnimal = false
 local playerPed
+local swimThread = nil
 
 local function IsPedAnimal(ped)
     return GetPedType(ped) == 28
@@ -57,25 +58,39 @@ local function HandleAnimalSwim()
 end
 
 local function CheckPed(ped)
-    if IsPedAnimal(ped) then
-        if not isAnimal then
-            isAnimal = true
+    local wasAnimal = isAnimal
+    isAnimal = IsPedAnimal(ped)
+    
+    if isAnimal then
+        if not wasAnimal or playerPed ~= ped then
+            if swimThread then
+                TerminateThread(swimThread)
+                swimThread = nil
+            end
+          
             playerPed = ped
-            CreateThread(HandleAnimalSwim)
+            swimThread = CreateThread(HandleAnimalSwim)
+           
+            SetPedDiesInWater(ped, false)
+            SetPedDiesInstantlyInWater(ped, false)
         end
     else
-        isAnimal = false
+        if wasAnimal then
+            if swimThread then
+                TerminateThread(swimThread)
+                swimThread = nil
+            end
+        end
     end
 end
 
--- Check for ox_lib, otherwise use a manual loop
 if lib and lib.onCache then
     lib.onCache('ped', CheckPed)
 else
     CreateThread(function()
         local lastPed = nil
         while true do
-            Wait(1000) -- Check every second
+            Wait(5000) -- CHecks every 5 seconds if the player is an animal, change this if yo uwant
             local ped = PlayerPedId()
             if ped ~= lastPed then
                 lastPed = ped
@@ -85,7 +100,6 @@ else
     end)
 end
 
--- Initial ped check
 CreateThread(function()
     CheckPed(PlayerPedId())
 end)
