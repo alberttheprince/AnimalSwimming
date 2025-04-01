@@ -43,6 +43,7 @@ When a player loads into the server, the script checks if their ped is an animal
 
 2. **Add the resource to your server config** (`server.cfg`):
 
+Optional: Use ox_lib for slight improvement of tracking ped changes
 ---
 
 
