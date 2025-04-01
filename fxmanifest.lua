@@ -5,7 +5,7 @@ use_experimental_fxv2_oal 'yes'
 
 author 'Cloutmatic / Edited by PrinceAlbert (Noor Nahas) of Popcorn RP'
 description 'Animal Swimming Script'
-version '1.0.0'
+version '1.1.0'
 
 client_script 'client.lua'
 
