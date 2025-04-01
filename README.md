@@ -1,4 +1,5 @@
-# 🐾 Animal Swim Module for FiveM
+![image](https://github.com/user-attachments/assets/2011e6ff-d73e-493b-8a69-50e3df844a15)
+
 
 Allows animal to swim and move in water! This lightweight client-side script prevents land-based animal peds from drowning or ragdolling in water, applying smooth upward force and preserving immersion when players use animal models.
 
@@ -47,9 +48,8 @@ When a player loads into the server, the script checks if their ped is an animal
 
 ## 👨‍💻 Credits
 
-[Popcorn RP community](https://discord.gg/popcornroleplay) for helping me test/modify this resource
+- [Popcorn RP community](https://discord.gg/popcornroleplay) for helping me test/modify this resource
 
-Cloutmatic for making the original script
-For support or questions, contact me on the FiveM forums under Gatorsman98 or Join Our New Discord!
-
-https://discord.gg/RQQyRpg2vB
+- Cloutmatic for making the original script
+For support or questions, contact me on the FiveM forums under Gatorsman98 or [Join Our New Discord](https://discord.gg/RQQyRpg2vB
+)!
